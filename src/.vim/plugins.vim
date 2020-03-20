@@ -12,4 +12,5 @@ call plug#begin($HOME . "/.vim/plugged")
 
   " Editing
   Plug 'tpope/vim-speeddating'
+  Plug 'editorconfig/editorconfig-vim'
 call plug#end()

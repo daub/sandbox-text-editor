@@ -25,6 +25,10 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'itchyny/lightline.vim'
     let g:lightline = {}
     let g:lightline.colorscheme = 'nord'
+    let g:lightline.component_function =  {
+          \ 'filetype': 'WebDevIconsGetFileTypeSymbol',
+          \ 'fileformat': 'WebDevIconsGetFileFormatSymbol',
+          \}
 
   Plug 'mengelbrecht/lightline-bufferline'
     let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
@@ -33,5 +37,10 @@ call plug#begin($HOME . "/.vim/plugged")
     let g:lightline#bufferline#min_buffer_count = 2
     let g:lightline#bufferline#unicode_symbols = 1
     let g:lightline#bufferline#clickable = 1
+    let g:lightline#bufferline#enable_devicons = 1
+
+  " load this last
+  Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+

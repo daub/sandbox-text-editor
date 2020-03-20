@@ -1,0 +1,6 @@
+src/.viminfo
+src/.vim/plugged
+src/.vim/.netrwhist
+src/.vim/autoload/plug.vim
+src/.vim/undo
+src/.vim/session

@@ -16,4 +16,5 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'tpope/vim-surround'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()

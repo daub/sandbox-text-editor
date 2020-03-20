@@ -9,4 +9,7 @@ endif
 call plug#begin($HOME . "/.vim/plugged")
   " Enhancements
   Plug 'tpope/vim-fugitive'
+
+  " Editing
+  Plug 'tpope/vim-speeddating'
 call plug#end()

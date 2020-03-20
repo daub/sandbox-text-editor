@@ -20,4 +20,17 @@ call plug#begin($HOME . "/.vim/plugged")
 
   " Colors
   Plug 'arcticicestudio/nord-vim'
+
+  " UI layout
+  Plug 'itchyny/lightline.vim'
+    let g:lightline = {
+        \ 'colorscheme': 'nord',
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+        \ },
+        \ 'component_function': {
+        \   'gitbranch': 'FugitiveHead'
+        \ },
+        \}
 call plug#end()

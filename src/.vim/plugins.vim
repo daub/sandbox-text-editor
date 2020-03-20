@@ -7,5 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin($HOME . "/.vim/plugged")
-  " Plugins go here
+  " Enhancements
+  Plug 'tpope/vim-fugitive'
 call plug#end()

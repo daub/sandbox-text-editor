@@ -156,6 +156,9 @@ set wildignore+=*.swp,.lock,.DS_Store,._*
 " load plugins
 source ~/.vim/plugins.vim
 
+" colors
+colorscheme nord
+
 " include optional local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local

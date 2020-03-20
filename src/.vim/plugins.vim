@@ -17,4 +17,7 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'editorconfig/editorconfig-vim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'jiangmiao/auto-pairs'
+
+  " Colors
+  Plug 'arcticicestudio/nord-vim'
 call plug#end()

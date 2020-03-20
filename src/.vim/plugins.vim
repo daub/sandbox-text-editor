@@ -15,4 +15,5 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-surround'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'michaeljsmith/vim-indent-object'
 call plug#end()

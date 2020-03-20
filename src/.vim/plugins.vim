@@ -11,6 +11,7 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'tpope/vim-fugitive'
 
   " Editing
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-speeddating'
   Plug 'editorconfig/editorconfig-vim'
 call plug#end()

@@ -105,5 +105,7 @@ call plug#begin($HOME . "/.vim/plugged")
     nnoremap <Leader>n :GFiles<CR>
     nnoremap <Leader>b :Buffers<CR>
 
+  Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 

@@ -4,3 +4,10 @@ src/.vim/.netrwhist
 src/.vim/autoload/plug.vim
 src/.vim/undo
 src/.vim/session
+
+# Coc
+src/.config/coc/*
+!src/.config/coc/extensions
+src/.config/coc/extensions/*
+!/src/.config/coc/extensions/package.json
+!/src/.config/coc/extensions/yarn.lock

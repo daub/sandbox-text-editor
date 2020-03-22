@@ -107,5 +107,22 @@ call plug#begin($HOME . "/.vim/plugged")
 
   Plug 'christoomey/vim-tmux-navigator'
 
+  " IDE features
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Use <c-space> for trigger completion.
+    inoremap <silent><expr> <c-space> coc#refresh()
+
+    inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
 call plug#end()
 

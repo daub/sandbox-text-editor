@@ -124,5 +124,8 @@ call plug#begin($HOME . "/.vim/plugged")
       return !col || getline('.')[col - 1]  =~# '\s'
     endfunction
 
+  " Syntax
+
+  Plug 'rust-lang/rust.vim'
 call plug#end()
 

@@ -39,6 +39,8 @@ call plug#begin($HOME . "/.vim/plugged")
     let g:lightline#bufferline#clickable = 1
     let g:lightline#bufferline#enable_devicons = 1
 
+  " Zen mode
+
   Plug 'junegunn/limelight.vim'
     let g:limelight_paragraph_span = 1
     let g:limelight_conceal_ctermfg = 'gray'
@@ -147,5 +149,7 @@ call plug#begin($HOME . "/.vim/plugged")
   " Syntax
 
   Plug 'rust-lang/rust.vim'
+    let g:rustfmt_autosave = 1
+
 call plug#end()
 

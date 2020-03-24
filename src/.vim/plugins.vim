@@ -151,5 +151,9 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'rust-lang/rust.vim'
     let g:rustfmt_autosave = 1
 
+  Plug 'pangloss/vim-javascript'
+    " Enables syntax highlighting for JSDocs.
+    let g:javascript_plugin_jsdoc = 1
+
 call plug#end()
 

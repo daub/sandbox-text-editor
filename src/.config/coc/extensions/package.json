@@ -1,6 +1,6 @@
 {
   "dependencies": {
     "coc-rls": "^1.1.4",
-    "coc-snippets": ">=2.1.22"
+    "coc-ultisnips": ">=1.2.3"
   }
 }

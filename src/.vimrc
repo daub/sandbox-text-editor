@@ -58,6 +58,9 @@ endif
 
 filetype plugin on
 
+"
+set signcolumn=yes
+
 " line numbers
 set relativenumber
 set number

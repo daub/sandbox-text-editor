@@ -4,6 +4,7 @@ src/.vim/.netrwhist
 src/.vim/autoload/plug.vim
 src/.vim/undo
 src/.vim/session
+src/.vim/view
 
 # Coc
 src/.config/coc/*

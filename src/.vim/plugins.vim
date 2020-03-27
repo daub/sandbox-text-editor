@@ -112,17 +112,6 @@ call plug#begin($HOME . "/.vim/plugged")
   " IDE features
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-    function! s:check_back_space() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
-
     " Use tab for trigger completion with characters ahead and navigate.
     inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
@@ -135,18 +124,16 @@ call plug#begin($HOME . "/.vim/plugged")
       imap <expr> <c-space> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     endif
 
-    " Use <C-l> for trigger snippet expand.
-    "imap <C-space> <Plug>(coc-snippets-expand)
-
-    " Navigate snippet placeholders using tab
-    let g:coc_snippet_next = '<Tab>'
-    let g:coc_snippet_prev = '<S-Tab>'
-
     " GoTo code navigation.
     nmap <silent> gd <Plug>(coc-definition)
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> gi <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
+
+    " Navigate snippet placeholders using tab
+    let g:coc_snippet_next = '<Tab>'
+    let g:coc_snippet_prev = '<S-Tab>'
+
 
   Plug 'dense-analysis/ale'
     let g:ale_linters = {
@@ -192,6 +179,7 @@ call plug#begin($HOME . "/.vim/plugged")
   " Engine
   Plug 'SirVer/ultisnips'
     let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snips"]
+
 
 
 call plug#end()

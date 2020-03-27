@@ -23,21 +23,10 @@ call plug#begin($HOME . "/.vim/plugged")
 
   " UI layout
 
+  " Status line
   Plug 'itchyny/lightline.vim'
-    let g:lightline = {}
-    let g:lightline.colorscheme = 'nord'
-    let g:lightline.component_function =  {
-          \ 'filetype': 'WebDevIconsGetFileTypeSymbol',
-          \ 'fileformat': 'WebDevIconsGetFileFormatSymbol',
-          \}
-
   Plug 'mengelbrecht/lightline-bufferline'
-    let g:lightline.tabline          = {'left': [['buffers']], 'right': []}
-    let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-    let g:lightline.component_type   = {'buffers': 'tabsel'}
-    let g:lightline#bufferline#unicode_symbols = 1
-    let g:lightline#bufferline#clickable = 1
-    let g:lightline#bufferline#enable_devicons = 1
+  Plug 'maximbaz/lightline-ale'
 
   " Zen mode
 
@@ -179,7 +168,5 @@ call plug#begin($HOME . "/.vim/plugged")
   " Engine
   Plug 'SirVer/ultisnips'
     let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snips"]
-
-
 
 call plug#end()

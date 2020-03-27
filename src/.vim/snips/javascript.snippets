@@ -1,0 +1,19 @@
+snippet #! "#!/usr/bin/env node" b
+#!/usr/bin/env node
+endsnippet
+
+#
+
+snippet req "CommonJS-style require"
+require('$0')
+endsnippet
+
+snippet mex "module.exports" b
+module.exports = $0
+endsnippet
+
+#
+
+snippet log "console.log()"
+console.log(${1:${VISUAL}})
+endsnippet

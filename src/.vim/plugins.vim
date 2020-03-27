@@ -112,33 +112,35 @@ call plug#begin($HOME . "/.vim/plugged")
   " IDE features
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Use tab for trigger completion with characters ahead and navigate.
     inoremap <silent><expr> <TAB>
-          \ pumvisible() ? "\<C-n>" :
-          \ <SID>check_back_space() ? "\<TAB>" :
-          \ coc#refresh()
-    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
     function! s:check_back_space() abort
       let col = col('.') - 1
       return !col || getline('.')[col - 1]  =~# '\s'
     endfunction
 
-    " Use <c-space> to trigger completion.
-    inoremap <silent><expr> <c-space> coc#refresh()
+    " Use tab for trigger completion with characters ahead and navigate.
+    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
     " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
     " position. Coc only does snippet and additional edit on confirm.
     if has('patch8.1.1068')
       " Use `complete_info` if your (Neo)Vim version supports it.
-      inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+      inoremap <expr> <c-space> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
     else
-      imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+      imap <expr> <c-space> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     endif
 
-    " Use `[g` and `]g` to navigate diagnostics
-    nmap <silent> <Leader>] <Plug>(coc-diagnostic-prev)
-    nmap <silent> <Leader>[ <Plug>(coc-diagnostic-next)
+    " Use <C-l> for trigger snippet expand.
+    "imap <C-space> <Plug>(coc-snippets-expand)
+
+    " Navigate snippet placeholders using tab
+    let g:coc_snippet_next = '<Tab>'
+    let g:coc_snippet_prev = '<S-Tab>'
 
     " GoTo code navigation.
     nmap <silent> gd <Plug>(coc-definition)
@@ -167,7 +169,7 @@ call plug#begin($HOME . "/.vim/plugged")
     let g:ale_list_vertical = 1
     " let g:ale_lint_on_text_changed = 'never'
     let g:ale_lint_on_enter = 0
-    let g:ale_completion_enabled = 1
+    " let g:ale_completion_enabled = 1
 
     " Keybindings
     nnoremap \    :ALEDetail<CR>
@@ -184,5 +186,12 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'pangloss/vim-javascript'
     " Enables syntax highlighting for JSDocs.
     let g:javascript_plugin_jsdoc = 1
+
+  " Snippets
+
+  " Engine
+  Plug 'SirVer/ultisnips'
+    let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snips"]
+
 
 call plug#end()

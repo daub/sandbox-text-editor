@@ -89,7 +89,7 @@ set listchars=tab:»\ ,trail:·,nbsp:·
 
 " conceal
 set concealcursor=n
-setlocal conceallevel=2
+setlocal conceallevel=0
 
 " cursor
 set nocursorline

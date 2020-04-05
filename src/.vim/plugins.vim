@@ -61,6 +61,15 @@ call plug#begin($HOME . "/.vim/plugged")
     " Enables syntax highlighting for JSDocs.
     let g:javascript_plugin_jsdoc = 1
 
+  Plug 'posva/vim-vue'
+    " Only highlight HTML, JavaScript, and CSS
+    " No Pug, SCSS, etc.
+    let g:vue_pre_processors = []
+
+  Plug 'mattn/emmet-vim'
+    " Trigger with `,,`
+    let g:user_emmet_leader_key=','
+
   Plug 'kylef/apiblueprint.vim'
 
   " Snippets

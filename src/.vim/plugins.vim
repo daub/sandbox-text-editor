@@ -28,6 +28,9 @@ call plug#begin($HOME . "/.vim/plugged")
 
   " UI layout
 
+  " Default start screen
+  Plug 'mhinz/vim-startify'
+
   " Status line
   Plug 'itchyny/lightline.vim'
   Plug 'mengelbrecht/lightline-bufferline'

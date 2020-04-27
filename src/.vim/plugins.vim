@@ -17,6 +17,7 @@ call plug#begin($HOME . "/.vim/plugged")
 
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
   Plug 'editorconfig/editorconfig-vim'
     " ensure works well with `tpope/vim-fugitive`

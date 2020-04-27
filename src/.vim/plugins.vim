@@ -17,6 +17,7 @@ call plug#begin($HOME . "/.vim/plugged")
 
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
   Plug 'editorconfig/editorconfig-vim'
     " ensure works well with `tpope/vim-fugitive`
@@ -26,6 +27,9 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'arcticicestudio/nord-vim'
 
   " UI layout
+
+  " Default start screen
+  Plug 'mhinz/vim-startify'
 
   " Status line
   Plug 'itchyny/lightline.vim'
@@ -60,6 +64,21 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'pangloss/vim-javascript'
     " Enables syntax highlighting for JSDocs.
     let g:javascript_plugin_jsdoc = 1
+
+  Plug 'posva/vim-vue'
+    " Only highlight HTML, JavaScript, and CSS
+    " No Pug, SCSS, etc.
+    let g:vue_pre_processors = []
+
+  Plug 'mattn/emmet-vim'
+    " Trigger with `,,`
+    let g:user_emmet_leader_key=','
+
+  Plug 'kylef/apiblueprint.vim'
+
+  Plug 'dart-lang/dart-vim-plugin'
+    let g:dart_style_guide = 2
+    let g:dart_format_on_save = 1
 
   " Snippets
 

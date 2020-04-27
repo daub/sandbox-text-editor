@@ -11,3 +11,6 @@ trim_trailing_whitespace = true
 
 [*.rs]
 indent_size = 4
+
+[*.apib]
+indent_size = 4

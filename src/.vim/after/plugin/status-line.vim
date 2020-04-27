@@ -11,8 +11,12 @@ let g:lightline.colorscheme = 'nord'
 "       \}
 
 let g:lightline.component_function =  {
+      \ 'filename': 'LightlineFilename',
       \ 'filetype': 'WebDevIconsGetFileTypeSymbol',
-      \ 'fileformat': 'WebDevIconsGetFileFormatSymbol',
+      \ 'mode': 'LightlineMode',
+      \ 'readonly': 'LightlineReadonly',
+      \ 'fileencoding': 'LightlineFileEncoding',
+      \ 'fileformat': 'LightlineFileFormat',
       \}
 
 let g:lightline.component_expand = {
@@ -45,7 +49,7 @@ let g:lightline.active = {
       \   [ 'filename', 'readonly', 'modified' ]
       \ ],
       \ 'right': [
-      \   [ 'fileformat', 'filetype' ],
+      \   [ 'fileformat', 'fileencoding', 'filetype' ],
       \   [ 'linter_errors', 'linter_warnings' ]
       \ ]
       \}
@@ -74,3 +78,53 @@ let g:lightline#ale#indicator_infos = "\uf129 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c "
+
+" helpers
+let s:plugin_files = [
+      \  '__vista__'
+      \]
+
+function IsSpecial()
+ return index(s:plugin_files, expand('%:t')) != -1
+endfunction
+
+" component functions
+function! LightlineMode() abort
+  if IsSpecial()
+    return ''
+  endif
+
+  return winwidth(0) > 60 ? lightline#mode() : ''
+endfunction
+
+function! LightlineFilename() abort
+  if IsSpecial()
+    return ''
+  endif
+
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
+
+function! LightlineReadonly() abort
+  if IsSpecial()
+    return ''
+  endif
+
+  return &readonly ? '' : ''
+endfunction
+
+" Display the file encoding only if it differs from the expected default (utf-8)
+function! LightlineFileEncoding() abort
+  let l:encoding = strlen(&fileencoding) ? &fileencoding : &encoding
+  return l:encoding !=? 'utf-8' ? l:encoding : ''
+endfunction
+
+" Display the file format only if it differs from the expected default (unix)
+function! LightlineFileFormat() abort
+  return &fileformat !=? 'unix' ? &fileformat : ''
+endfunction

@@ -36,6 +36,9 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'mengelbrecht/lightline-bufferline'
   Plug 'maximbaz/lightline-ale'
 
+  " Tag browser
+  Plug 'liuchengxu/vista.vim'
+
   " Zen mode
 
   Plug 'junegunn/limelight.vim'

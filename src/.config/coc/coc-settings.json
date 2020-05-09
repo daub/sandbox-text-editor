@@ -1,0 +1,8 @@
+{
+  "diagnostic.displayByAle": true,
+  "suggest.noselect": false,
+  "rust.clippy_preference": "on",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart"
+  ]
+}

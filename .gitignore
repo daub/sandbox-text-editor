@@ -8,6 +8,7 @@ src/.vim/view
 
 # Coc
 src/.config/coc/*
+!src/.config/coc/coc-settings.json
 !src/.config/coc/extensions
 src/.config/coc/extensions/*
 !/src/.config/coc/extensions/package.json

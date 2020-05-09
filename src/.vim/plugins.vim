@@ -86,9 +86,16 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'thosakwe/vim-flutter'
 
   " Snippets
+  Plug 'honza/vim-snippets'
 
   " Engine
-  Plug 'SirVer/ultisnips'
-    let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snips"]
+  " Plug 'SirVer/ultisnips'
+  "   let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snips"]
+  "   let g:UltiSnipsExpandTrigger='<Nop>'
+  "   " let g:UltiSnipsJumpForwardTrigger = '<TAB>'
+  "   " let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
+  "   let g:coc_snippet_next = '<TAB>'
+  "   let g:coc_snippet_prev = '<S-TAB>'
+
 
 call plug#end()

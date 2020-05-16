@@ -1,3 +1,5 @@
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -17,5 +19,5 @@ endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
-nnoremap <Leader>n :GFiles<CR>
+nnoremap <Leader>n :Files<CR>
 nnoremap <Leader>b :Buffers<CR>

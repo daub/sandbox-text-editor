@@ -44,9 +44,6 @@ call plug#begin($HOME . "/.vim/plugged")
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/goyo.vim'
 
-  " load this last
-  Plug 'ryanoasis/vim-devicons'
-
   " Navigation
 
   Plug 'junegunn/fzf'
@@ -97,5 +94,8 @@ call plug#begin($HOME . "/.vim/plugged")
   "   let g:coc_snippet_next = '<TAB>'
   "   let g:coc_snippet_prev = '<S-TAB>'
 
+
+  " load this last
+  Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

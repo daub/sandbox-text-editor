@@ -39,7 +39,7 @@ call plug#begin($HOME . "/.vim/plugged")
   " Tag browser
   Plug 'liuchengxu/vista.vim'
 
-  " Zen mode
+  " Focus mode
 
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/goyo.vim'

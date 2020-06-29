@@ -120,8 +120,8 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 
-nnoremap <Leader>h :bprevious<CR>
-nnoremap <Leader>l :bnext<CR>
+nnoremap <Leader>[ :bprevious<CR>
+nnoremap <Leader>] :bnext<CR>
 
 " splits
 nnoremap <Leader>\ :vsp<CR>
@@ -136,6 +136,15 @@ inoremap <C-S> <C-C>:update<CR>
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" Make < > shifts keep selection
+vnoremap < <gv
+vnoremap > >gv
+
+" Copy to system clipboard
+vnoremap  <leader>y  "+y
+vnoremap  <leader>Y  "+yg$
+nnoremap  <leader>yy  "+yy
 
 " extra settings
 

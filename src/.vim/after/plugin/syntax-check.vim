@@ -22,6 +22,6 @@ let g:ale_lint_on_enter = 0
 
 " Keybindings
 nnoremap \    :ALEDetail<CR>
-nnoremap ]    :ALENext<CR>
-nnoremap [    :ALEPrevious<CR>
+nnoremap <leader>j    :ALENext<CR>
+nnoremap <leader>k    :ALEPrevious<CR>
 nnoremap <CR> :ALEHover<CR>

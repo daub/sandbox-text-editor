@@ -8,7 +8,10 @@ endif
 
 call plug#begin($HOME . "/.vim/plugged")
   " Enhancements
+
+  " Git
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
 
   " Editing
   Plug 'tpope/vim-commentary'
@@ -76,11 +79,16 @@ call plug#begin($HOME . "/.vim/plugged")
 
   Plug 'kylef/apiblueprint.vim'
 
+  " Plug 'kovetskiy/sxhkd-vim'
+  Plug 'baskerville/vim-sxhkdrc'
+
   Plug 'dart-lang/dart-vim-plugin'
    " let g:dart_style_guide = 2
    " let g:dart_format_on_save = 1
 
   Plug 'thosakwe/vim-flutter'
+
+  Plug 'jparise/vim-graphql'
 
   " Snippets
   Plug 'honza/vim-snippets'

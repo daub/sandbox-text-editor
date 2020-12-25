@@ -4,6 +4,12 @@
   "diagnostic.displayByAle": false,
   "rust.clippy_preference": "on",
   "coc.preferences.formatOnSaveFiletypes": [
-    "dart"
-  ]
+    "dart",
+    "elixir",
+    "javascript",
+    "typescript"
+  ],
+  "diagnostic.errorSign": "✕",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•"
 }

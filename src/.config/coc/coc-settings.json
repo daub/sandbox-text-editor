@@ -1,5 +1,7 @@
 {
-  "diagnostic.displayByAle": true,
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "diagnostic.displayByAle": false,
   "rust.clippy_preference": "on",
   "coc.preferences.formatOnSaveFiletypes": [
     "dart"

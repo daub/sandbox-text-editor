@@ -57,7 +57,7 @@ call plug#begin($HOME . "/.vim/plugged")
   " IDE features
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'dense-analysis/ale'
+  " Plug 'dense-analysis/ale'
 
   " Syntax
 

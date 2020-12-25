@@ -88,6 +88,8 @@ call plug#begin($HOME . "/.vim/plugged")
   " Plug 'kovetskiy/sxhkd-vim'
   Plug 'baskerville/vim-sxhkdrc'
 
+  Plug 'elixir-editors/vim-elixir'
+
   Plug 'dart-lang/dart-vim-plugin'
    " let g:dart_style_guide = 2
    " let g:dart_format_on_save = 1
